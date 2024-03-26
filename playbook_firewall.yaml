@@ -3,13 +3,13 @@
   hosts: windows
   vars:
 	ansible_user: Administrator
-	ansible_password: mandamas
+	ansible_password: passwd
 	ansible_shell_type: cmd
   tasks:
 
 	- name: Copiar
   	copy:
-    	src: /home/tic/firewall_ac.ps1
+    	src: /home/user/firewall_ac.ps1
     	dest: 'C:\Users\{{ ansible_user }}\AppData\Local\Temp\command.ps1'
     	owner: "{{ ansible_user }}"
     	mode: '0777'
